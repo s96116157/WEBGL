@@ -97,13 +97,13 @@
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
           };
+          console.log("fullscreenButton.onclick()");
+          document.getElementById("unity-fullscreen-button").click();
         }).catch((message) => {
           alert(message);
         });
       };
       document.body.appendChild(script);
-      console.log("fullscreenButton.onclick()");
-      document.getElementById("unity-fullscreen-button").click();
     </script>
   </body>
 </html>
