@@ -96,9 +96,10 @@
           loadingBar.style.display = "none";
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
+            console.log("fullscreenButton.onclick()");
           };
-          console.log("fullscreenButton.onclick()");
-          document.getElementById("unity-fullscreen-button").click();
+          //console.log("fullscreenButton.onclick()");
+          //document.getElementById("unity-fullscreen-button").click();
         }).catch((message) => {
           alert(message);
         });
