@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | WEB</title>
+    <title>Unity WebGL Player | ThirdPerson</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=800 height=600></canvas>
+      <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">WEB</div>
+        <div id="unity-build-title">ThirdPerson</div>
       </div>
     </div>
     <script>
@@ -56,14 +56,14 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/WEB_001.loader.js";
+      var loaderUrl = buildUrl + "/WEB.loader.js";
       var config = {
-        dataUrl: buildUrl + "/WEB_001.data.unityweb",
-        frameworkUrl: buildUrl + "/WEB_001.framework.js.unityweb",
-        codeUrl: buildUrl + "/WEB_001.wasm.unityweb",
+        dataUrl: buildUrl + "/WEB.data.unityweb",
+        frameworkUrl: buildUrl + "/WEB.framework.js.unityweb",
+        codeUrl: buildUrl + "/WEB.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "WEB",
+        productName: "ThirdPerson",
         productVersion: "0.1",
         showBanner: unityShowBanner,
       };
@@ -82,7 +82,7 @@
         config.devicePixelRatio = 1;
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
-        canvas.style.width = "800px";
+        canvas.style.width = "960px";
         canvas.style.height = "600px";
       }
       loadingBar.style.display = "block";
@@ -96,10 +96,7 @@
           loadingBar.style.display = "none";
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
-            console.log("fullscreenButton.onclick()");
           };
-          //console.log("fullscreenButton.onclick()");
-          //document.getElementById("unity-fullscreen-button").click();
         }).catch((message) => {
           alert(message);
         });
